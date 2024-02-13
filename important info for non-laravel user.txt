@@ -1,21 +1,32 @@
+npm version 18.15.0
+
 change to php 8.1.0
 
-https://www.youtube.com/watch?v=CnIXzKJqCqs --> to change your php version to >= 8.1.0 
-if you not change, it cannot be run this project. 
+https://www.youtube.com/watch?v=CnIXzKJqCqs --> to change your php version to >= 8.1.0
+if you not change, it cannot be run this project.
 
 
 
 to serve
 
-composer install 
+composer install
 npm install
 #######################################################################################
 .env is the main setting file
 
+go to .env file check to make sure database name is the same as "ecommercepro" or you can decide any db name your self
+
 php artisan migrate --> before do this please make sure the data base already created
 example: name of database is "ecommercepro"
+
+after finish migrate , copy paste the dummy database to the phpMyadmin
+
+
+
+register at stripe account and key in the test public key and secrete key in .env
+https://stripe.com/en-my
+
 #######################################################################################
-go to .env file check to make sure database name is the same as "ecommercepro". 
 
 
 npm run dev  --> this to build the dependencies for the project
@@ -33,7 +44,7 @@ steps to create and some Laravel notes. notes will have a *mark
 
 create model--> migration and change the schema--> create controller--> create route at web.php -->create view
 
-below are some command in composer to create model, migrations and controller. 
+below are some command in composer to create model, migrations and controller.
 
 
 php artisan make:model CatagoryName -m   the -m is for migration after model created.
@@ -51,9 +62,9 @@ the $request in the controller is calling the form's "name=something"
 ***************************************************************************************
 *@foreach is like for loop in javascript
  @foreach ($data as $data)  --> the data are send by controller as (compact).
- 
 
-the controller get the data from the model connected to the DB. 
+
+the controller get the data from the model connected to the DB.
 ***************************************************************************************
 
 *@include is like php importing components with <?php include ''>
@@ -82,7 +93,7 @@ below are example image upload code
 
   public function show_product()
     {
-        $product=product:all(); --> meaning get all product and assign to product variable 
+        $product=product:all(); --> meaning get all product and assign to product variable
         return view('admin.show_product',compact('product'));
     }
 
