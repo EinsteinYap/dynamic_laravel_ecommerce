@@ -29,8 +29,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 
 class HomeController extends Controller
-{   
-  
+{
+
 
     public function index()
     {
@@ -89,8 +89,8 @@ class HomeController extends Controller
 
                 $cart_count=cart::where('user_id','=',$user_id)->count();
 
-                
-               
+
+
             return view('home.userpage',compact('product','comment','reply','cart_count'));
 
             }
@@ -104,7 +104,7 @@ class HomeController extends Controller
 
         $product=Product::orderby('id','desc')->paginate(6);
 
-        
+
       $comment=comment::orderby('id','desc')->get();
 
         $reply=reply::all();
@@ -170,8 +170,8 @@ class HomeController extends Controller
 
             $cart_count=cart::where('user_id','=',$user_id)->count();
 
-            
-           
+
+
         return view('home.userpage',compact('product','comment','reply','cart_count'));
     	}
     }
@@ -188,7 +188,7 @@ class HomeController extends Controller
 
             $cart_count=cart::where('user_id','=',$user_id)->count();
 
-        return view('home.product_details',compact('product','cart_count')); 
+        return view('home.product_details',compact('product','cart_count'));
         }
 
         else
@@ -196,12 +196,12 @@ class HomeController extends Controller
 
             $product=product::find($id);
 
- 
+
 
         return view('home.product_details',compact('product'));
         }
 
-        
+
 
     }
 
@@ -248,7 +248,7 @@ class HomeController extends Controller
 
               Alert::success('Product Added to Cart', 'Congrats!!! You\'ve Successfully Added Product to the cart');
 
-                return redirect()->back(); 
+                return redirect()->back();
 
             }
 
@@ -287,7 +287,7 @@ class HomeController extends Controller
                             $cart->price=$product->price * $request->quantity;
                         }
 
-                        
+
 
                          $cart->image=$product->image;
 
@@ -307,7 +307,7 @@ class HomeController extends Controller
             }
 
 
-       
+
 
         }
 
@@ -332,7 +332,7 @@ class HomeController extends Controller
 
              $cart_count=cart::where('user_id','=',$id)->count();
 
-        $cart=cart::where('user_id','=',$id)->get();
+             $cart=cart::where('user_id','=',$id)->get();
 
         return view('home.showcart',compact('cart','cart_count'));
 
@@ -343,7 +343,7 @@ class HomeController extends Controller
             return redirect('login');
         }
 
-       
+
     }
 
 
@@ -356,7 +356,7 @@ class HomeController extends Controller
 
         $cart->delete();
 
-   
+
 
 
         return redirect()->back();
@@ -384,14 +384,14 @@ class HomeController extends Controller
 
                 $order->save();
 
-           
+
 
 
        }
 
-           
 
-      
+
+
 
         return redirect()->back();
 
@@ -475,7 +475,7 @@ class HomeController extends Controller
 
 
         }
-      
+
 
 
 
@@ -504,21 +504,21 @@ class HomeController extends Controller
         return view('home.stripe',compact('totalprice','cart_count'));
         }
 
-       
+
     }
 
 
     public function stripePost(Request $request,$totalprice)
     {
 
-      
+
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-    
+
         Stripe\Charge::create ([
                 "amount" => $totalprice * 100,
                 "currency" => "usd",
                 "source" => $request->stripeToken,
-                "description" => "Thanks for payment." 
+                "description" => "Thanks for payment."
         ]);
 
 
@@ -577,9 +577,9 @@ class HomeController extends Controller
 
 
         }
-      
+
         Alert::Success('Payment Successful', 'Thanks for the Order . We Will send you the Product Within 48 Hours.');
-              
+
         return back();
     }
 
@@ -726,7 +726,7 @@ class HomeController extends Controller
         else
         {
 
-           
+
 
         $comment=comment::orderby('id','desc')->get();
 
@@ -738,7 +738,7 @@ class HomeController extends Controller
 
         return view('home.userpage',compact('product','comment','reply'));
         }
-        
+
 
     }
 
@@ -777,17 +777,17 @@ class HomeController extends Controller
 
         $reply=reply::all();
 
-        
+
 
         return view('home.all_product',compact('product','comment','reply'));
         }
-        
+
     }
 
 
      public function search_product(Request $request)
 
-    {   
+    {
         if(Auth::id())
         {
 
@@ -816,7 +816,7 @@ class HomeController extends Controller
 
         $reply=reply::all();
 
-        
+
 
         $serach_text=$request->search;
 
@@ -825,13 +825,13 @@ class HomeController extends Controller
         return view('home.all_product',compact('product','comment','reply'));
 
         }
-  
+
 
     }
 
 
     public function contact()
-    {   
+    {
         if(Auth::id())
         {
 
@@ -840,9 +840,9 @@ class HomeController extends Controller
          $user_id=Auth::user()->id;
 
           $cart_count=cart::where('user_id','=',$user_id)->count();
-        
+
         return view('home.contact',compact('cart_count'));
-       
+
         }
 
         else
@@ -851,7 +851,7 @@ class HomeController extends Controller
 
         }
 
-       
+
     }
 
 
@@ -879,7 +879,7 @@ class HomeController extends Controller
     }
 
 
-    
 
- 
+
+
 }
