@@ -1,16 +1,38 @@
-npm version 18.15.0
+npm version 18.15.0 -> download from --> https://nodejs.org/en/blog/release/v18.15.0
 
-change to php 8.1.0
+change to php  =< 8.1.0
+################################# template references #####################################
+Templates references are below.
+
+for the customer user page, we will use this code as references
+https://themewagon.com/themes/famms-free-responsive-bootstrap-4-e-commerce-website-template/
+
+for the admin template , we use this github code as references because look premium.
+https://technext.github.io/corona-free-dark-bootstrap-admin-template/index.html
+
+####################################### PHP version for laravel 9.0 #####################################
+
+
 
 https://www.youtube.com/watch?v=CnIXzKJqCqs --> to change your php version to >= 8.1.0
 if you not change, it cannot be run this project.
 
+download old version of php . example: 8.02
+
+copy paste 2 folders to your new xampp folder 'apache' and the 'php'
+
+change the php.ini in the php folders , search for the \xampp code,
+there are 8 of them, change them to 'c:\xampp'
+
+thats all.
+
+check them with php -v in terminal
 
 
 to serve
 
-composer install
-npm install
+composer install  --> to install Laravel's dependencies --> must install composer first. --> https://getcomposer.org/download/
+npm install --> to install other dependencies
 #######################################################################################
 .env is the main setting file
 
@@ -26,6 +48,16 @@ after finish migrate , copy paste the dummy database to the phpMyadmin
 register at stripe account and key in the test public key and secrete key in .env
 https://stripe.com/en-my
 
+if you not yet install stripe, please install
+composer require stripe/stripe-php
+
+please go to resource/views/home/stripe.blade.php look at the payment codes.
+we can go to the home controller and find the stripePost function to change the currency charge customers
+
+or go to visit below link to integrate
+
+https://www.itsolutionstuff.com/post/laravel-9-stripe-payment-gateway-integration-tutorialexample.html
+
 below are test card for the payment. nothing will be charge from real account
 
 Visa	4242424242424242	Any 3 digits	Any future date
@@ -39,8 +71,128 @@ American Express	371449635398431	Any 4 digits	Any future date
 
 more can get from here : https://stripe.com/docs/testing
 
+################################ user and admin registration ##################################
+For user and admin registration plugin function -> references (already pre-installed for this project)
+1. composer require laravel/jetstream
+2.php artisan jetstream:install livewire
+3.npm install
+4.npm run dev
+5.changes in User table
+6.php artisan migrate
+7.go to view --> auth --> register.blade.php change to add phone and address input field
+8.go to models->user.php to add $fillable input field
+9.go to app --> action --> Fortify --> CreateNewUser.php
+
+
+at return User::create([
+    ....
+    'phone' =>$input['phone],
+    'address'=>$input['address']
+    ])
+
+
+10. after register admin , manually go to cPanel change the admin userType to 1
+
+######################## PDF download function ################################
+PDF download
+
+1.composer require barryvdh/laravel-dompdf
+
+2. Go to config/app.php
+add into providers
+'providers' => [
+    ...
+
+    Barryvdh\DomPDF\ServiceProvider::class,
+],
+
+'aliases' => [
+    ...
+     'PDF' => Barryvdh\DomPDF\Facade::class,
+
+
+]
+
+
+############################# Email function #################################
+For email
+
+1.go to .env setup
+2.go to gmail setting (required 2FA) and setup special password to link to laravel .
+3.go to the app/Models/User.php
+
+add 'implements MustVerifyEmail' to the user class -->( optional advance features)
+
+class User extends Authenticatable implements MustVerifyEmail
+
+4.go to config/fortify.php  -->(optional advance features)
+
+at 'features' =>[
+    ....
+    Features::emailVerification(),
+]
+
+
+
+-----------------------------------Email Notification------------------------------------
+1.php artisan notifications:table
+2.php artisan migrate
+3.php artisan make:notification SendEmailNotification -->example
+
+4.go to the Notification folder and find the SendEmailNotification php file and edit it
+example below
+public function toMail($notifiable)
+    {
+        return (new MailMessage)
+                    ->greeting($this->details['greeting'])
+                    ->line($this->details['firstline'])
+                    ->line($this->details['body'])
+                    ->action($this->details['button'] , $this->details['url'])
+                    ->line($this->details['lastline']);
+    }
+
+
+5. copy this use Notifiable and use Illuminate\Notifications\Notifiable; from User.php to Order.php
+
+6. to modify the default laravel email
+php artisan vendor:publish --tag=laravel-mail
+--------------------------------------------------------------------------------------
+
+
+#######################################################################################
+some times search no data found and it will cause errors
+using @foreach will cause error if no data found
+use @forelse to solve it
+
+
 #######################################################################################
 
+SweetAlert
+
+1.composer require realrashid/sweet-alert
+2.php artisan sweetalert:publish
+3.Add this to the view where you want to show the MailMessage
+@include('sweetalert:;alert')
+
+4.Go to your Controller and add this at the tutorialexample
+    use RealRashid\SweetAlert\Facedes\Alert;
+
+5. Send the alert message from the controller.
+example --> in between save and the return ->back
+Alert::success('Message Received', 'We will review your message and contact with you soon');
+Alert::warning('Message Received', 'We will review your message and contact with you soon');
+
+confirmation sweet alert
+import the sweet alert cdn and script
+@include('sweetalert')
+need onclick(event)
+
+
+
+
+
+
+#######################################################################################
 
 npm run dev  --> this to build the dependencies for the project
 
