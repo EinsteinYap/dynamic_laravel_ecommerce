@@ -18,7 +18,7 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Anna Trevor
+                                Anonymous
                             </h5>
                             <h6>
                                 Customer
@@ -42,7 +42,7 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Anna Trevor
+                                Anonymous
                             </h5>
                             <h6>
                                 Customer
@@ -66,7 +66,7 @@
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Anna Trevor
+                                Anonymous
                             </h5>
                             <h6>
                                 Customer
