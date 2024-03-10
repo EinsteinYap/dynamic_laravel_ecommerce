@@ -74,9 +74,9 @@
 
 <div class="cpy_">
     <p class="mx-auto">© 2024 All Rights Reserved By <a
-            href="https://www.youtube.com/channel/UCeNYDojo4nU2sbHz1sMsBXw/">fbaw-my.com</a><br>
+            href="https://fbaw-my.com/">fbaw-my.com</a><br>
 
-        Distributed By <a href="https://www.youtube.com/channel/UCeNYDojo4nU2sbHz1sMsBXw" target="_blank">fbaw-my.com</a>
+        Distributed By <a href="https://fbaw-my.com/" target="_blank">fbaw-my.com</a>
 
     </p>
 </div>

@@ -183,7 +183,7 @@
         <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © fbaw-my.com
             2024</span>
         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a
-                href="https://www.youtube.com/c/WebTechKnowledge" target="_blank">fbaw-my.com</a> </span>
+                href="https://fbaw-my.com/" target="_blank">fbaw-my.com</a> </span>
     </div>
 </footer>
 <!-- partial -->

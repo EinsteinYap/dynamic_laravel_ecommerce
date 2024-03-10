@@ -153,9 +153,9 @@
         <div style="padding-top: 215px;">
             <div class="cpy_">
                 <p class="mx-auto">© 2024 All Rights Reserved By <a target="_blank"
-                        href="https://www.youtube.com/channel/UCeNYDojo4nU2sbHz1sMsBXw/">fbaw-my.com</a><br>
+                        href="https://fbaw-my.com/">fbaw-my.com</a><br>
 
-                    Distributed By <a target="_blank" href="https://www.youtube.com/channel/UCeNYDojo4nU2sbHz1sMsBXw"
+                    Distributed By <a target="_blank" href="https://fbaw-my.com/"
                         target="_blank">>fbaw-my.com</a>
 
                 </p>
