@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
    <head>
-      
+
 
       @include('home.css')
 
-   
+
 
    </head>
    <body>
@@ -26,17 +26,17 @@
                         <li class="nav-item ">
                            <a class="nav-link" href="{{url('/')}}">Home  </a>
                         </li>
-                       
+
                         <li class="nav-item">
                            <a class="nav-link" href="{{url('products')}}">Products</a>
                         </li>
-                       
+
                         <li class="nav-item">
                            <a class="nav-link" href="{{url('contact')}}">Contact</a>
                         </li>
 
-                       
-                        
+
+
                       @if (Route::has('login'))
 
                         @auth
@@ -51,16 +51,16 @@
                            <a class="nav-link"  style="background-color: skyblue; " href="{{url('show_cart')}}">Cart [ 0 ]</a>
                         </li>
 
-                       
+
                         @endauth
 
                         @endif
 
 
-                         
 
 
-                        
+
+
                            @auth
 
                         <li class="nav-item" style="padding-left: 10px!important;
@@ -75,18 +75,18 @@
                            <a class="nav-link"  style="background-color: lavender; " href="{{url('show_order')}}">Order [ 0 ]</a>
                         </li>
 
-                       
+
                         @endauth
                         </li>
 
 
-                       
+
 
                         @if (Route::has('login'))
 
                         @auth
 
-                       
+
                   <div class="dropdown">
 
                     <button style="background-color: #7A838C; border-radius: 8px; font-size: 16px; padding: 10px;" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,27 +101,27 @@
 
                       <form class="dropdown-item"  method="POST" action="{{ route('logout') }}">
                           @csrf
-                         
+
                               <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                           this.closest('form').submit(); " role="button">
-                                  
+
 
                                   {{ __('Log Out') }}
                               </a>
-                          
+
                       </form>
 
-                       
-                             
-                             
+
+
+
                     </div>
 
                   </div>
-                    
-                     
-                         
-                        
-                 
+
+
+
+
+
               </li>
             </ul>
 
@@ -137,22 +137,22 @@
                         @endauth
 
                         @endif
-                        
-                        
+
+
                      </ul>
                   </div>
                </nav>
             </div>
          </header>
 
- 
-        <!--  header section ends here -->
-     
 
-       <span style="display: none;"> 
+        <!--  header section ends here -->
+
+
+       <span style="display: none;">
 
        <x-app-layout></x-app-layout>
-    
+
       </span>
 
 
@@ -205,10 +205,10 @@
 </div>
 
 <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Web Tech Knowledge</a><br>
-         
-            Distributed By <a href="https://themewagon.com/" target="_blank">Web Tech Knowledge</a>
-         
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">fbaw-my.com</a><br>
+
+            Distributed By <a href="https://themewagon.com/" target="_blank">fbaw-my.com</a>
+
          </p>
       </div>
            <!-- jQery -->
