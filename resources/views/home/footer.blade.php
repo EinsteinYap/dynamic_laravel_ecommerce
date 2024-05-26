@@ -1,20 +1,21 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-12">
                 <div class="full">
                     <div class="logo_footer">
-                        <a href="{{ url('/') }}"><img width="210" src="{{ asset('images/websale.png') }}"
+                        <a href="{{ url('/') }}"><img width="100" height="100" src="{{ asset('images/websale.png') }}"
                                 alt="#" /></a>
                     </div>
-                    <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
-                    </div>
+
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class=" row col-12 d-flex flex-row justify-content-center">
+                <p class="p-2"><strong>ADDRESS:</strong> Kuala Lumpur , Malaysia</p>
+                <p class="p-2"><strong>TELEPHONE:</strong>+6017 273 9455</p>
+                <p class="p-2"><strong>EMAIL:</strong> einstienyap2014@gmail.com</p>
+            </div>
+            {{-- <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="row">
@@ -65,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </footer>
