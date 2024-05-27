@@ -1,6 +1,6 @@
 <section class="slider_section ">
     <div class="slider_bg_box">
-        <img src="images/ecom.png" alt="">
+        <img src="images/ecom-4.png" alt="">
     </div>
     <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -17,9 +17,7 @@
                                     On Everything
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
+                                    Everything are low price here
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
@@ -38,15 +36,13 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                        Sale 20% Off
+                                        You will love
                                     </span>
                                     <br>
                                     On Everything
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
+                                    You will love to shop here
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
@@ -65,15 +61,13 @@
                             <div class="detail-box">
                                 <h1>
                                     <span>
-                                        Sale 20% Off
+                                        Simple
                                     </span>
                                     <br>
                                     On Everything
                                 </h1>
                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
+                                    Simple shop
                                 </p>
                                 <div class="btn-box">
                                     <a href="" class="btn1">
