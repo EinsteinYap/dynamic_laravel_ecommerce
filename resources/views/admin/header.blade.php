@@ -4,7 +4,7 @@
             <a style="color: white; padding-left: 20px;" href="{{ url('/redirect') }}">Admin</a>
         </div>
         <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
                 <span class="mdi mdi-menu"></span>
             </button>
             <ul class="navbar-nav w-100">

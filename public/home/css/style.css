@@ -4,6 +4,7 @@
 #logincss
 {
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 * {
@@ -191,7 +192,10 @@ a:focus {
 .custom_nav-container .nav_search-btn:hover {
   color: #f7444e;
 }
-
+.navbar-toggler{
+    margin-left: auto;
+    margin-right: auto;
+}
 .custom_nav-container .navbar-toggler {
   outline: none;
 }
