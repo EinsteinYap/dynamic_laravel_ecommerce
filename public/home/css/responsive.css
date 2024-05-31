@@ -95,11 +95,15 @@
   }
 }
 
-@media (max-width: 420px) {}
+@media (max-width: 767px) {
+    .slider_section .detail-box h1 {
+        font-size: 3rem;
+      }
+}
 
-@media (max-width: 376px) {
+@media (max-width: 484px) {
   .slider_section .detail-box h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
