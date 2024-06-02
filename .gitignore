@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/ecommercepro.sql
 .env
 .env.backup
 .phpunit.result.cache

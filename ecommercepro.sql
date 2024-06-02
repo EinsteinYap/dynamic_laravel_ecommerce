@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 05:58 PM
+-- Generation Time: Jun 02, 2024 at 11:33 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.25
 
@@ -230,7 +230,8 @@ INSERT INTO `orders` (`id`, `name`, `email`, `phone`, `address`, `user_id`, `pro
 (58, 'user', 'user@gmail.com', '14874512', 'Kuala Lumpur, Malaysia', '23', 'Samsung Mobile', '1', '380', '1651256206.jpg', '7', 'cash on delivery', 'processing', '2022-10-08 05:41:16', '2022-10-08 05:41:16'),
 (59, 'user', 'user@gmail.com', '0101902', 'Kuala Lumpur, Malaysia', '20', 'Botique For Women', '1', '122', '1651256020.png', '4', 'Paid', 'processing', '2024-02-13 00:20:57', '2024-02-13 00:20:57'),
 (60, 'user', 'user@gmail.com', '0101902', 'Kuala Lumpur, Malaysia', '20', 'Laptop', '1', '199', '1651256082.jpg', '6', 'Paid', 'processing', '2024-02-13 00:20:57', '2024-02-13 00:20:57'),
-(61, 'user', 'user@gmail.com', '0101902', 'Kuala Lumpur, Malaysia', '20', 'Laptop', '1', '199', '1651256082.jpg', '6', 'Paid', 'processing', '2024-02-16 06:44:11', '2024-02-16 06:44:11');
+(61, 'user', 'user@gmail.com', '0101902', 'Kuala Lumpur, Malaysia', '20', 'Laptop', '1', '199', '1651256082.jpg', '6', 'Paid', 'processing', '2024-02-16 06:44:11', '2024-02-16 06:44:11'),
+(62, 'EinsteinYap', 'einsteinyap2014@gmail.com', '0172739455', 'Kuala Lumpur ,Malayisa', '35', 'Leave', '1', '100', '1708526761.jpg', '8', 'cash on delivery', 'processing', '2024-06-01 07:01:20', '2024-06-01 07:01:20');
 
 -- --------------------------------------------------------
 
@@ -250,7 +251,9 @@ CREATE TABLE `password_resets` (
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
 ('yaminshakil10@gmail.com', '$2y$10$Xo2MKu1a7B311jQ3VFlm2O1KPDr/2tIEWnKXn30j2C79aao8twaGa', '2022-06-04 03:52:43'),
-('yaminshakil7@gmail.com', '$2y$10$pBKiiOXmVAlLf9G0PWYNveKKRS5mhKwyn53QzL0cbxyZFNoInhZly', '2022-06-16 00:57:31');
+('yaminshakil7@gmail.com', '$2y$10$pBKiiOXmVAlLf9G0PWYNveKKRS5mhKwyn53QzL0cbxyZFNoInhZly', '2022-06-16 00:57:31'),
+('admin@gmail.com', '$2y$10$L07Lv5qlsDVCDPWO4HMTDOjMlhhmFLagQO76kICayMMZIrJgUWl66', '2024-06-01 02:01:52'),
+('einsteinyap2014@gmail.com', '$2y$10$tyKYy7P5KVOnFXrccTzPVuJyi1O6CAaALDvJNps7PPy/R2N4jGiGO', '2024-06-01 08:32:37');
 
 -- --------------------------------------------------------
 
@@ -346,8 +349,12 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('3afUmtgy6ioiLKHiwrcFbAUz3hUfLJUzsw0ziHJ4', 20, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOEVtaGdNdmJrQldzYjNBOFF6RGJJMmU4NVBQZnUyNVI0bmpTQ3FJbiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzk6Imh0dHA6Ly9sb2NhbGhvc3QvZHluYW1pY19sYXJhdmVsL3B1YmxpYyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIwO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkeC5MdWc0Y3A3MFl5dkg4NGgvM3ZPT2psTDRIaDV0WFRKVnJReWIxT3FPbktFOTBNRE1Sd3kiO30=', 1716739056),
-('wCGdzqzUEOprMWPVv9jjBTI45ndfBZksNDtu6TN1', 21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYUJQZDU2UzZCNXBmeEpDM2FXelJadVh6MU04TTZDclZmMVpDWUs4VyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jdXN0b21lciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkeC5MdWc0Y3A3MFl5dkg4NGgvM3ZPT2psTDRIaDV0WFRKVnJReWIxT3FPbktFOTBNRE1Sd3kiO30=', 1716736396);
+('27Z0heazVoyPWMI4n3k2VYPImhs7ZpQqCDIhlHt6', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQ0ZQclJHVTNxa1JMdGV5TUlJQk1tN0c1dFdyUEVHdkhiTGxNQThKUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717320782),
+('AJl2H7JsFTSLES38a9EeWSQxio4hbbAl2pOqvAaM', NULL, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTzNXT3d1SGVkeU1Yb0xlUjRGN1Z4SnRRUmRKbmJ6VVVEZVdSSjlNdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb3Jnb3QtcGFzc3dvcmQiO319', 1717259560),
+('dNaZPoPUfkKiI3DRshb8ui5yQs1F8byvV3eIQ9BG', 35, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSVg2dlBCOFhNdkg4c3BHWG05SlZ4ZmdxQ2ZkZjJwUlkybmlzZFB4ZSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMxOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvc2hvd19jYXJ0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MzU7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ3TFVRZmpsaWhXTWpKZWpIT3k4czllOE4ydi9PN0FDN0lncy5RVXJmUjhMN1JRU2ZrVGRNRyI7czo1OiJhbGVydCI7YTowOnt9fQ==', 1717254081),
+('gVcATlysfXnHql3Ox85qpMlslBvMxZywTeALBtH4', 21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYTJDOUlaRUNnRFZ5VFRGelBKVExoazBzZGFJb2FwTDh3NmdCV3h0NyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zZW5kX2VtYWlsLzYyIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4Lkx1ZzRjcDcwWXl2SDg0aC8zdk9PamxMNEhoNXRYVEpWclF5YjFPcU9uS0U5ME1ETVJ3eSI7fQ==', 1717254143),
+('iSmkpdsdU1kdH5ZEfAzsEAVMPIqAziqSaNQufM8q', 34, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVHphRk42SG96ZTB2Tms2Rk5NdUdWRnJKU1N3YUdOWlRzbXY5QmxHMyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9yZWRpcmVjdD92ZXJpZmllZD0xIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MzQ7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR3OERlQU55WHp0NHY1QWZLazY3MGllaUlCalpqNVVwU0wwcDBWTk04Y1BUQzVBVmJnLk9NQyI7fQ==', 1717237205),
+('U6aZRdhd9VgILK75HaONkVvtheK7WxCwx3FNNZtl', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYm42SkkxMTJNeExvRTg2aHhUQzA0MEdxRjM1RVJ0MnJaSHJVbEVMeSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb3Jnb3QtcGFzc3dvcmQiO319', 1717241730);
 
 -- --------------------------------------------------------
 
@@ -381,8 +388,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `usertype`, `phone`, `address`, `ema
 (20, 'user', 'user@gmail.com', '0', '0172739455', 'Kuala Lumpur ,Malayisa', '2022-06-04 06:23:34', '$2y$10$x.Lug4cp70YyvH84h/3vOOjlL4Hh5tXTJVrQyb1OqOnKE90MDMRwy', NULL, NULL, NULL, NULL, NULL, '2022-04-29 12:06:59', '2022-06-16 23:15:28'),
 (21, 'admin', 'admin@gmail.com', '1', '0172739455', 'Kuala Lumpur ,Malayisa', '2022-06-03 06:23:56', '$2y$10$x.Lug4cp70YyvH84h/3vOOjlL4Hh5tXTJVrQyb1OqOnKE90MDMRwy', NULL, NULL, 'Dvq6fGMjNW8xqAysf6OWzgmGwAa9LVxKNVD3XYaOvNRujYEe8PhySRoa6bhU', NULL, NULL, '2022-04-29 12:07:31', '2022-04-29 12:07:31'),
 (23, 'customer', 'customer@gmail.com', '0', '0172739455', 'Kuala Lumpur ,Malayisa', '2022-06-15 18:00:02', '$2y$10$x.Lug4cp70YyvH84h/3vOOjlL4Hh5tXTJVrQyb1OqOnKE90MDMRwy', NULL, NULL, NULL, NULL, NULL, '2022-05-05 03:21:06', '2022-05-05 03:21:06'),
-(32, 'ey', 'einsteinyap2014@gmail.com', '0', '0172739455', 'Kuala Lumpur ,Malayisa', NULL, '$2y$10$x.Lug4cp70YyvH84h/3vOOjlL4Hh5tXTJVrQyb1OqOnKE90MDMRwy', NULL, NULL, NULL, NULL, NULL, '2024-02-14 07:46:05', '2024-02-14 07:46:05'),
-(33, 'ey', 'einsteinyap2013@gmail.com', '0', '0172739455', 'Kuala Lumpur ,Malayisa', NULL, '$2y$10$x.Lug4cp70YyvH84h/3vOOjlL4Hh5tXTJVrQyb1OqOnKE90MDMRwy', NULL, NULL, NULL, NULL, NULL, '2024-02-14 07:52:01', '2024-02-14 07:52:01');
+(35, 'EinsteinYap', 'einsteinyap2014@gmail.com', '0', '0172739455', 'Kuala Lumpur ,Malayisa', '2024-06-01 03:07:39', '$2y$10$7LUQfjlihWMjJejHOy8s9e8N2v/O7AC7Igs.QUrfR8L7RQSfkTdMG', NULL, NULL, NULL, NULL, NULL, '2024-06-01 03:07:21', '2024-06-01 03:07:39'),
+(36, 'einstein', 'einstein.endless@gmail.com', '0', NULL, NULL, NULL, '$2y$10$JOJl4LVmyJFvpHfimAklJu0ih7ffIjOkH43ZQPIn14h3yDb6Mu9Ti', NULL, NULL, NULL, NULL, NULL, '2024-06-01 06:44:15', '2024-06-01 06:44:15');
 
 --
 -- Indexes for dumped tables
@@ -487,7 +494,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `catagories`
@@ -523,7 +530,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -547,7 +554,7 @@ ALTER TABLE `replies`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
