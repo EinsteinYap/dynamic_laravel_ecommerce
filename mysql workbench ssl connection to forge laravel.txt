@@ -1,0 +1,20 @@
+mysql workbench ssl connection to forge laravel
+
+1st step
+generate a public ssh key in your device / desktop / laptop
+
+copy the public ssh key to laravel forge
+
+
+2nd step
+-go to the mysql workbench , select add connections
+-select Standard TCP/IP over ssh
+-both SSH host name and the MySQL Hostname is the ip address from the server of the Forge's Digital Ocean
+-both password use the default forge generated password
+-SSH key file must be the PRIVATE key file.
+
+
+FINAL STEPS
+-TEST connection
+
+END
