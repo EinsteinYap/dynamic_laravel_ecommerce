@@ -1,0 +1,37 @@
+Perfect Intergration Github + Godaddy + Laravel Forge + Digital Ocean
+ 
+a)godaddy to laravel.forge.com
+
+1st step at godaddy. 
+allow conenction from forge.com to Remote MySQL GoDaddy. 
+
+
+2nd step 
+godaddy database password must be auto generate. 
+
+3rd step 
+create a domain and ensure the SSL certificate is signed
+
+4th step , go to DNS management 
+add new Type A DNS redirect and route the new domain name from GoDaddy 
+to the forge IP address with 600 second
+
+b)go to the laravel.forge.com
+
+1st step 
+add server 
+
+2nd step 
+add site with the domain name created from godaddy. 
+
+3rd step 
+After created the site (require Type A DNS redirect from godaddy)
+and install the github repo.  
+
+4th step
+add enviroment value at enviroment tab.
+
+5th step 
+install SSL certificate that copy from godaddy
+
+the end
